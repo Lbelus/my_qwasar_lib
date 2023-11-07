@@ -1,0 +1,53 @@
+push int8(97)
+print
+push int32(33)
+dump
+push int32(33)
+dump
+assert int32(33)
+add
+dump
+push int32(500)
+dump
+push int32(2)
+dump
+mul
+dump
+div
+dump
+; this is a comment
+push int32(2)
+dump
+push int32(3)
+dump
+mod
+dump
+push int16(10)
+dump
+add
+dump
+push int8(5)
+dump
+sub
+dump
+push int8(5)
+dump
+push int8(5)
+dump
+push int8(5)
+dump
+push int8(5)
+dump
+push int8(5)
+dump
+push int8(5)
+dump
+push int8(5)
+dump
+push int8(5)
+dump
+push float(42.42)
+dump
+mod
+dump
+exit
