@@ -1,0 +1,59 @@
+
+[94m
+ ██████╗ ██╗    ██╗ █████╗ ███████╗ █████╗ ██████╗    ██╗ ██████╗ 
+██╔═══██╗██║    ██║██╔══██╗██╔════╝██╔══██╗██╔══██╗   ██║██╔═══██╗
+██║   ██║██║ █╗ ██║███████║███████╗███████║██████╔╝   ██║██║   ██║
+██║▄▄ ██║██║███╗██║██╔══██║╚════██║██╔══██║██╔══██╗   ██║██║   ██║
+╚██████╔╝╚███╔███╔╝██║  ██║███████║██║  ██║██║  ██║██╗██║╚██████╔╝
+ ╚══▀▀═╝  ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝ ╚═════╝ 
+																																 [0m
+Booting Gandalf v4.1.12-deab022 (production)
+Loading parameters:  [32mOK[0m
+User belus_l connection: [32mOK[0m
+
+
+<MY_CURL>
+Directory . exists: [32mOK[0m
+RSPEC Detected
+Pushing exercise: [32mOK[0m
+Printing your report:
+
+ [97;1;40m     REPORT      [0m  [97m  MY CURL  [0m 
+
+ Status             [92mSUCCESS[0m     
+ Execution Runtime  1.093887    
+ Score              [[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m] 5/5 
+
+
+Checks detail Report:
+
+ [97;1;40m     MY CURL SHOULD PRINT     [0m  [92mSUCCESS[0m 
+ [97;1;40m     200 OK WHEN GETTING      [0m  [92m       [0m 
+ [97;1;40m    HTTP://HTTPSTAT US/200    [0m  [92m       [0m 
+
+
+
+ [97;1;40m   MY CURL SHOULD PRINT 404   [0m  [92mSUCCESS[0m 
+ [97;1;40m    NOT FOUND WHEN GETTING    [0m  [92m       [0m 
+ [97;1;40m    HTTP://HTTPSTAT US/404    [0m  [92m       [0m 
+
+
+
+ [97;1;40m   MY CURL SHOULD PRINT 500   [0m  [92mSUCCESS[0m 
+ [97;1;40m  INTERNAL SERVER ERROR WHEN  [0m  [92m       [0m 
+ [97;1;40mGETTING HTTP://HTTPSTAT US/500[0m  [92m       [0m 
+
+
+
+ [97;1;40m                MY CURL SHOULD CURL NORMAL PAGE                 [0m  [92mSUCCESS[0m 
+ [97;1;40m(HTTP://STORAGE GOOGLEAPIS COM/QWASAR-PUBLIC/S02 SE/SAMPLE HTML)[0m  [92m       [0m 
+ [97;1;40m                   AND PRINT ALL ITS CONTENT                    [0m  [92m       [0m 
+
+
+
+ [97;1;40m      MY CURL PROGRAM SHOULD PRINT      [0m  [92mSUCCESS[0m 
+ [97;1;40m        COULD NOT RESOLVE HOST:         [0m  [92m       [0m 
+ [97;1;40mI DON T EXIST REALLY I DON T EXISSST COM[0m  [92m       [0m 
+
+
+</MY_CURL>
