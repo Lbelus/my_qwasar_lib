@@ -1,0 +1,39 @@
+int main(int argc, char** argv)
+{
+    if (welcome_error(argc))
+    {
+        return EXIT_FAILURE;
+    }
+
+    set_t* visited  = new_set();
+
+    char val_a[] = "aasdad";
+    char val_b[] = "basdasd";
+    char val_c[] = "casdad";
+
+    char* ptr_a = NULL;
+    char* ptr_b = NULL;
+    char* ptr_c = NULL;
+
+    ptr_a = val_a;
+    ptr_b = val_b;
+    ptr_c = val_c;
+
+    add(visited, ptr_a);
+    add(visited, ptr_b);
+    add(visited, ptr_c);
+
+    printf("Set already exist %i: \n", include(visited, ptr_a));
+    enqueue(&queue, ptr_a);
+    enqueue(&queue, ptr_b);
+    enqueue(&queue, ptr_c);
+
+    printf("The front is element: %s\n", queue.front);
+    // printf("Dequeued element: %s\n", dequeue(&queue));
+    // printf("Dequeued element: %s\n", dequeue(&queue));
+    // free(ptr_a);
+    // free(ptr_b);
+    // free(ptr_c);
+
+    return EXIT_SUCCESS;
+}
