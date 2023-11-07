@@ -1,0 +1,41 @@
+
+[94m
+ ██████╗ ██╗    ██╗ █████╗ ███████╗ █████╗ ██████╗    ██╗ ██████╗ 
+██╔═══██╗██║    ██║██╔══██╗██╔════╝██╔══██╗██╔══██╗   ██║██╔═══██╗
+██║   ██║██║ █╗ ██║███████║███████╗███████║██████╔╝   ██║██║   ██║
+██║▄▄ ██║██║███╗██║██╔══██║╚════██║██╔══██║██╔══██╗   ██║██║   ██║
+╚██████╔╝╚███╔███╔╝██║  ██║███████║██║  ██║██║  ██║██╗██║╚██████╔╝
+ ╚══▀▀═╝  ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝ ╚═════╝ 
+																																 [0m
+Booting Gandalf v4.1.12-deab022 (production)
+Loading parameters:  [32mOK[0m
+User belus_l connection: [32mOK[0m
+
+
+<MY_BSQ>
+Directory . exists: [32mOK[0m
+RSPEC Detected
+Pushing exercise: [32mOK[0m
+Printing your report:
+
+ [97;1;40m     REPORT      [0m  [97m MY BSQ  [0m 
+
+ Status             [92mSUCCESS[0m   
+ Execution Runtime  0.017964  
+ Score              [[32m=[0m[32m=[0m[32m=[0m] 3/3 
+
+
+Checks detail Report:
+
+ [97;1;40mMY BSQ TEST 10X10 A[0m  [92mSUCCESS[0m 
+
+
+
+ [97;1;40mMY BSQ TEST 10X10 B[0m  [92mSUCCESS[0m 
+
+
+
+ [97;1;40mMY BSQ TEST 100X100[0m  [92mSUCCESS[0m 
+
+
+</MY_BSQ>
