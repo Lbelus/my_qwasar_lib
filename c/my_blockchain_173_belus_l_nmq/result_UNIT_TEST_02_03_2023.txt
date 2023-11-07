@@ -1,0 +1,71 @@
+
+[94m
+ ██████╗ ██╗    ██╗ █████╗ ███████╗ █████╗ ██████╗    ██╗ ██████╗ 
+██╔═══██╗██║    ██║██╔══██╗██╔════╝██╔══██╗██╔══██╗   ██║██╔═══██╗
+██║   ██║██║ █╗ ██║███████║███████╗███████║██████╔╝   ██║██║   ██║
+██║▄▄ ██║██║███╗██║██╔══██║╚════██║██╔══██║██╔══██╗   ██║██║   ██║
+╚██████╔╝╚███╔███╔╝██║  ██║███████║██║  ██║██║  ██║██╗██║╚██████╔╝
+ ╚══▀▀═╝  ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝ ╚═════╝ 
+																																 [0m
+Booting Gandalf v4.1.12-deab022 (production)
+Loading parameters:  [32mOK[0m
+User belus_l connection: [32mOK[0m
+
+
+<MY_BLOCKCHAIN>
+Directory . exists: [32mOK[0m
+RSPEC Detected
+Pushing exercise: [32mOK[0m
+Printing your report:
+
+ [97;1;40m     REPORT      [0m  [97mMY BLOCKCHAIN [0m 
+
+ Status             [92mSUCCESS[0m        
+ Execution Runtime  0.081926       
+ Score              [[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m] 8/8 
+
+
+Checks detail Report:
+
+ [97;1;40mMY BLOCKCHAIN CLI AVAILABLE[0m  [92mSUCCESS[0m 
+
+
+
+ [97;1;40m  MY BLOCKCHAIN EXECUTION I   [0m  [92mSUCCESS[0m 
+ [97;1;40m         COMMAND QUIT         [0m  [92m       [0m 
+
+
+
+ [97;1;40m   MY BLOCKCHAIN PARSING I    [0m  [92mSUCCESS[0m 
+ [97;1;40m         INVALID TEXT         [0m  [92m       [0m 
+
+
+
+ [97;1;40m  MY BLOCKCHAIN ADD NODE AND  [0m  [92mSUCCESS[0m 
+ [97;1;40m            PRINT             [0m  [92m       [0m 
+
+
+
+ [97;1;40m MY BLOCKCHAIN ADD A NODE X,  [0m  [92mSUCCESS[0m 
+ [97;1;40m ADD A BLOCK TO A NODE X AND  [0m  [92m       [0m 
+ [97;1;40m            PRINT             [0m  [92m       [0m 
+
+
+
+ [97;1;40m  MY BLOCKCHAIN ADD MULTIPLE  [0m  [92mSUCCESS[0m 
+ [97;1;40m NODES AND BLOCKS  RM A BLOCK [0m  [92m       [0m 
+ [97;1;40m          AND PRINT           [0m  [92m       [0m 
+
+
+
+ [97;1;40m  MY BLOCKCHAIN ADD MULTIPLE  [0m  [92mSUCCESS[0m 
+ [97;1;40m NODES AND BLOCKS  RM A NODE  [0m  [92m       [0m 
+ [97;1;40m          AND PRINT           [0m  [92m       [0m 
+
+
+
+ [97;1;40m  MY BLOCKCHAIN ADD MULTIPLE  [0m  [92mSUCCESS[0m 
+ [97;1;40m    NODES AND BLOCKS  SYNC    [0m  [92m       [0m 
+
+
+</MY_BLOCKCHAIN>

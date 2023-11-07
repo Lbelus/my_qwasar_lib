@@ -1,0 +1,175 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+void my_revswap (char *ptr, char*ptr1, char tmp_char)
+{
+    while(ptr1 < ptr)
+    {
+		tmp_char = *ptr;
+		*ptr--= *ptr1;
+		*ptr1++ = tmp_char;
+	}
+}
+// PRE DEFINE BITMASKS HERE 
+	//!= ctoi take a value and return a buffer. 
+
+    // ref ITOA : https://www.strudel.org.uk/itoa/
+	char* itoa(int value, char* result, int base)
+    {
+		// check that the base if valid
+		if (base < 2 || base > 36) { *result = '\0'; return result; }
+
+		char* ptr = result, *ptr1 = result, tmp_char = 0;
+		int tmp_value;
+
+		// Translating number to string with base and storing it:
+		do
+        {
+			tmp_value = value;
+			value /= base;
+			*ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
+		}
+        while (value);
+
+		// Apply negative sign
+		if (tmp_value < 0) *ptr++ = '-';
+		*ptr-- = '\0';
+		
+		my_revswap(ptr, ptr1, tmp_char);
+		
+		return result;
+	}
+
+int my_ctoi(char *string, size_t n)
+{
+    int num = 0;
+    int mult = 1;
+    n =(int)n < 0 ? -n : n; // check abs val
+
+    //for every value in array
+    while (n--)
+    {
+        if ((string[n] < '0' || string[n]> '9') && string[n] != '-'){ //check for int or '-'
+            if(num)
+            {
+                break;
+            }
+            else
+            {
+                continue;
+            }
+        }
+
+        if (string[n] == '-')
+        { // if '-' negate
+            if (num)
+            {
+                num = -num;
+                break;
+            }
+
+        }
+        else
+        {
+            num += (string[n]- '0')*mult; // convert to numeric value
+            mult *=10;
+
+        }
+    }
+    return num;
+}
+long dec_to_bin(int val)
+{
+    long bin = 0;
+    int rem  = 0;
+    int tmp = 1;
+
+    while(val != 0)
+    {
+        rem = val % 2;
+        val /= 2;
+        bin += rem*tmp;
+        tmp *= 10;
+    }
+    return bin;
+}
+
+int my_pow(int val, int exp)
+{
+    int result = 1;
+    while (exp > 0)
+    {
+        if (exp % 2 == 1)
+        {
+            result *= val;
+        }
+        exp /= 2;
+        val *= val;
+    }
+    return result;
+}
+
+#define BLOCK_ADD   2060171284
+#define BLOCK_RM    1112149039
+#define NODE_ADD    233620095
+#define NODE_RM     381772396
+#define SYNC        1491471
+#define LS          146
+#define QUIT        2044899
+
+
+// int main(void)
+// {
+//   char str[] = "addblock"; // result is negatif
+//   // char str[] = "helloworld";
+//   int key = 31;
+//   int hash = 0;
+//   int index = 0;
+//   while (str[index] != '\0')
+//   {
+//     hash = key * hash + my_pow(str[index], index); //key*hash + pow(str[index], index) // math.h pow is double so its making issues by promoting initial variable
+//     index += 1;
+//   }
+//   printf("%i\n", hash);
+//   hash = hash & 0x7fffffff;
+//   // hash /= hashtable;
+//   //store on table
+//   printf("%i\n", hash);
+//   return 0;
+// }
+
+
+int main(void)
+{    
+    char str[] = "node";
+    int mask = 0;
+    int index = 0;
+    int jndex =0;
+    char buff[32] = {'\0'};
+    // unsigned int bin_val = 0;
+    while (str[index] != '\0')
+    {
+        // itoa(str[index]*(index+1), buff, 2);
+        printf("from itoa buff :%s\n",itoa(str[index], buff, 2));
+        printf("fn int_to_bin :%li\n", dec_to_bin(str[index]));
+        jndex = 0;
+        while(buff[jndex] != '\0')
+        {
+            if (buff[jndex] == '1')
+            {
+                mask = mask | (1 << jndex);
+            }
+            else
+            if (buff[jndex] == '0')
+            {
+                mask = mask & ~(1 << jndex);
+            }
+            jndex += 1;
+        }
+        bzero(buff, strlen(buff));
+        index += 1;
+    }
+    printf("mask    : |%i|\n", mask);
+    return 0;
+}
