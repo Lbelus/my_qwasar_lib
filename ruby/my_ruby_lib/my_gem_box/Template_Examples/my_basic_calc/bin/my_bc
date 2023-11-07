@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'my_rpn'
+require 'my_bc'
+rpn_notation = My_bc.shunting_yard_algo(ARGV)
+puts my_rpn_fn(rpn_notation)

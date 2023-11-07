@@ -1,0 +1,19 @@
+$ gem signin
+Enter your RubyGems.org credentials.
+Don't have an account yet? Create one at https://rubygems.org/sign_up
+  Email:   (your-email-address@example.com)
+Password:   (your password for RubyGems.org)
+
+API Key name [host-user-20220102030405]:
+Please select scopes you want to enable for the API key (y/n)
+index_rubygems [y/N]:   n
+push_rubygem [y/N]:   y
+yank_rubygem [y/N]:   n
+add_owner [y/N]:   n
+remove_owner [y/N]:   n
+access_webhooks [y/N]:   n
+show_dashboard [y/N]:   n
+
+You have enabled multi-factor authentication. Please enter OTP code.
+Code:   123456
+Signed in with API key: host-user-20220102030405.

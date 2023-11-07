@@ -1,0 +1,131 @@
+class InvertedIndex
+    def initialize
+        @data = {}
+        @index = {}
+    end
+
+    def insert(id, txt)
+        @data[id] = txt
+        update_index(id, txt)
+    end
+
+    def insert_hash(data, is_id = false)
+        if is_id
+            id = is_id
+        else id = new_id
+        end
+        txt = data.values.join(',')
+        @data[id] = txt
+        update_index(id, txt)
+    end
+
+    def update_index(id, txt)
+        values = txt.split(',')
+        values.each do |value|
+            @index[value] ||= []
+            @index[value] << id
+        end
+    end
+
+    def new_id
+        id = (@data.keys.map(&:to_i).max + 1).to_s
+    end
+
+    def get_column_id(value)
+        column_lists = @data['0'].split(',')
+        col_id = column_lists.index(value)
+    end
+
+    def key_exist?(id)
+        result = @data.has_key?(id)        
+    end
+
+    def delete_entry(id)
+        data = @data[id].split(',')
+        data.each do |value|
+            @index[value].delete(id);
+            if(@index[value] == [])
+                @index.delete(value)
+            end
+        end
+        @data.delete(id)
+    end
+
+    def modify_entry(new_data, id)
+        id = id.to_s
+        delete_entry(id)
+        insert_hash(new_data, id)
+    end
+
+    def create_new_data(data, id)
+      headers = @data['0'].split(',')
+      old_data = @data[id].split(',')
+      new_data = {}
+      new_headers = data.keys
+      new_values = data.values
+      jndex = 0
+      headers.each.with_index do |header, index|
+        if header == new_headers[jndex]
+          new_data[header] = new_values[jndex]
+          jndex += 1
+        else
+        new_data[header] = old_data[index]
+        end
+      end
+      new_data
+    end
+
+    def update_value(data)
+        values = data.values
+        id = values[0].to_s
+        if key_exist?(id)
+          modify_entry(data, id)
+        end
+    end
+
+    def modify_column(data, id_list)
+        new_list = id_list.dup
+        new_list.each do |id|
+            new_data = create_new_data(data, id)
+            modify_entry(new_data, id)
+        end
+      @index  
+    end
+
+    def get_db
+        matrix = []
+        index = 0
+        @data.each do |elem|
+            row = []
+            row = elem[1].split(',')
+            matrix << row
+        end
+       matrix
+    end
+
+    def get_id_list(value)
+      id_list = @index[value]
+    end
+
+    def search(value)
+        id_list = @index[value]
+        return [] unless id_list
+        id_list.map { |id| @data[id] }
+    end
+
+    def from_to(from, to)
+        matrix = []
+        index = 0
+        @data.each do |elem|
+            row = []
+            values = elem[1].split(',')
+            for val in from..to do
+                row[index] = values[val]
+                index += 1
+            end
+            index = 0
+            matrix << row
+        end
+        matrix
+    end
+end
