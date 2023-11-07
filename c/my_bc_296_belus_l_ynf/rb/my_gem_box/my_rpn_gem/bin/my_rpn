@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'my_rpn'
+puts Calc.my_rpn(ARGV)
