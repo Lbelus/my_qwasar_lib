@@ -59,8 +59,8 @@ def brackets(str):
             stack.append(ch)
         elif is_closing(ch) and stack:
             o_bracket = stack.pop()
-        if match_closing(o_bracket) == ch:
-            continue
-        else:
-            return False
+            if match_closing(o_bracket) == ch:
+                continue
+            else:
+                return False
     return True
