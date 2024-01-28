@@ -48,27 +48,3 @@ void free(void* ptr)
         release_mem(bitnode);
     }
 }
-
-        // if (!is_page_valid(page, ptr))
-        // {
-        //     // printf("page not valid \n");
-        //     if (!(bitnode = retrieve_bitlist(ptr)))
-        //     {
-        //         return;
-        //     }
-        // }
-
-    // printf("tee ok \n");
-    // char buff[15];
-    // itoa(size, buff, 10);
-    // write(1, buff, my_strlen(buff));
-    // write(1,"\n", 1);
-    // printf("pointer addresse is at %i\n", (uintptr_t)ptr);
-    // write(1,"free\n", 5);
-    // printf("retreiving page from ptr : %p\n", ptr);
-    // printf("NB slot is : %i\n", tee->nb_slot);
-    // printf("found page on tree : %p\n", page);
-    // printf("offset value : %i\n", offset);
-    // printf("nb_page : %i\n", bitnode->nb_page);
-    // printf("free :Offset: %i | slot: %i | len: %i\n", offset, start, tee->nb_slot);
-    // printf("pos is %i\n", start);

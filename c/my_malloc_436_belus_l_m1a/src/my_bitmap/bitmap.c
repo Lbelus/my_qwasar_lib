@@ -108,7 +108,6 @@ void initialize_bit_list(void* ptr, int nb_page)
     new_node->next = NULL;
     int len = calc_nb_slot(sizeof(bitlist_t) + sizeof(bitlist_t) + sizeof(page_t), new_node->nb_page);
     set_bits(new_node->bmp, 0, len, true);
-    // printf("insert_new_BMP\n");
     insert_bmp(&handler->head, new_node);  
 }
 
@@ -198,52 +197,3 @@ int find_free_slot(bmp_t* bmp, int len)
     }
     return -1;
 }
-
-
-// // not optimized to recode
-// // should have variable holding last free_position for quicker search
-// // should have an actual algoritm to handle the search.
-// /* #################### find_free_slot ###################
-//     Roam through the bitlist to find an unused slot.
-//     @return (int) free slot index
-// */
-// int find_free_slot(bmp_t* bmp, int len)
-// {
-//     int byte_index = 0;
-//     int bit_index = 0;
-//     int start = 0;
-//     int nb_slot = 0;
-//     while (byte_index < BITMAP_SIZE)
-//     {
-//         while (bit_index < 8)
-//         {
-//             if (!get_bit(bmp[byte_index], bit_index))
-//             {
-//                 start = byte_index * 8 + bit_index;
-//                 if (start + len > BITMAP_SIZE* 8 -1)
-//                 {
-//                     return -1;
-//                 }
-//                 nb_slot = count_free_bits(bmp, start, len);
-//                 if (nb_slot >= len)
-//                 {
-//                     return start;
-//                 }
-//                 bit_index += nb_slot % 8;
-//                 byte_index += nb_slot / 8;
-//               if (bit_index >= 8)
-//               {
-//                     byte_index += bit_index / 8;
-//                     bit_index %= 8;
-//               break;
-//               }  
-//             }
-            
-//             bit_index += 1;
-//         }
-//         bit_index = 0;
-//         byte_index += 1;
-//     }
-//     // printf("returning -1\n");
-//     return -1;
-// }

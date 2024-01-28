@@ -55,7 +55,7 @@ Returning a pointer automatically makes the corresponding slot available, optimi
 
 ## Installation
 
-This malloc lib can run a substitute for stdlib.h on malloc, calloc, realloc, free and malloc_usable_size using LD_PRELOAD trick : 
+This malloc lib can run as a substitute for stdlib.h on malloc, calloc, realloc, free and malloc_usable_size using LD_PRELOAD trick : 
 
 Insert inside the terminal : 
 1.

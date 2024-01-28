@@ -82,10 +82,6 @@ void* get_ptr(size_t size)
     }
     return NULL;
 }
-// printf("malloc :Offset: %i | slot: %i | len: %i\n",offset, slot, len);
-// printf("nb_slot : %i, len: %i\n", tee->nb_slot, len);
-// return (void*)bmp + offset;
-// printf("bmp val%p\n", bmp);
 
 /* #################### set_handler ###################
     set handler
@@ -117,8 +113,6 @@ void initialize_handler()
         set_bits(handler->head->bmp, 0, len, true);
     }
 }
-// insert(&handler->search_tree, NULL);
-// insert(&handler->search_tree, (void*)ptr);
 
 
 /* #################### set_page ###################
@@ -137,7 +131,6 @@ page_t* set_page(void* ptr, int nb_page)
     handler->search_tree = insert(handler->search_tree, page);
     return page;
 }
-// printf("insert page on tree : %i\n", (uintptr_t)page);
 
 /* #################### req_memory ###################
     require memory from system in page size using my_mmap and set page;
@@ -156,7 +149,6 @@ void* req_memory(size_t size)
     ptr = set_page(ptr, nb_page);
     return (void*)ptr;
 }
-// ptr = mmap(0, new_size, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
 
 /* #################### release memory ###################
     check if next bitmap is clear and relase page(s) to memory
