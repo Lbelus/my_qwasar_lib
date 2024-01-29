@@ -1,7 +1,7 @@
 #ifndef MY_SOCKET_
 #define MY_SOCKET_
 
-// #include <yy00_my_main_server.hpp>
+
 #include <main_header.hpp>
 #include <utility>
 #define BYTE_MAX_PLUS_ONE 256

@@ -1,7 +1,6 @@
 #ifndef MY_CLIENT_
 #define MY_CLIENT_
 
-// #include <yy00_my_main_server.hpp>
 #include <main_header.hpp>
 
 unsigned short toUnsShort(int num);

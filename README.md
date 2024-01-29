@@ -48,6 +48,9 @@ A more comprehensive readme is available at the project URL;
 C, asm (nasm64), Makefile
 
 #### Usage:
+
+
+#### Installation:
 From the project root dir
 
 ```bash
@@ -65,8 +68,52 @@ unset LD_PRELOAD
 make fclean
 ```
 
+
+
 /!\ make debug do not produce a usable binary/!\
 
 #### Project URL:
 https://github.com/Lbelus/my_qwasar_lib/tree/main/c/my_malloc_436_belus_l_m1a
 
+
+# Project #2: my_ftp
+
+## Description
+
+An implementation of a FTP server following a strict BNF through a custom LEXER/PARSER. 
+The users needs to be able to roam through the directories independently from one another and retreive files.
+
+Active and passive mode to tranfer the file is available: 
+- Active Mode will have the server connect to client; 
+- Passive Mode will let the user connect to server; 
+
+The Project has three main components:
+- LEXER/PARSER;
+- Server FTP;
+- Client FTP;
+
+#### Why ? 
+- Understand the limitation arround socket;
+- Learn how to use mulithreading;
+- learn how to handle multiple client at once;
+
+#### Installation:
+From the main directory : 
+```bash
+make
+```
+From the clientFTP directory :
+
+```bash
+make
+```
+run the server then the client
+
+
+### usage
+The Following CMD are available 
+
+Every command existing on the bnf will receive an answer from the server, but only USER, PASS, CWD, PWD, LIST, PASV, PORT and RETR have been implemented;
+
+#### Technologies Used: 
+CPP, C, asm (nasm64), Makefile

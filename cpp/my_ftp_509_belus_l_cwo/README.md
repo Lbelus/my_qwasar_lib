@@ -35,7 +35,7 @@ Data transfer MUST use "active" or "passive" mode as explained in the protocol.
 
 The task is to reproduce a FTP SERVER  to transmit files over a TCP/IP connections. 
 
-The Client asks for a file and the Server provices it, the server should be able to handlemultiple users at once through the usage of multithreading.
+The Client asks for a file and the Server provices it, the server should be able to handle multiple users at once through the usage of multithreading.
 
 The users needs to be able to roam through the directories independently from one another.
 

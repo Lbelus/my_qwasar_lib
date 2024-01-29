@@ -9,8 +9,6 @@
 
 //getoptobj : 
 
-
-
 // #include <stdlib.h>
 // #include <my_unistd.h>
 // #include <stdlib.h>

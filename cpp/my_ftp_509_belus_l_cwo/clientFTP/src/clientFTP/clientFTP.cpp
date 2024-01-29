@@ -39,7 +39,6 @@ std::string prepareACTVMessage(const std::string& token, std::string IpAddress)
     std::string keyword;
     int value;
     iss >> keyword >> value;
-    // int port = std::stoi(value);
     std::string port_str = createPortString(value);
     std::replace(IpAddress.begin(), IpAddress.end(), '.', ',');
     std::string result = keyword + " " + IpAddress + "," + port_str;

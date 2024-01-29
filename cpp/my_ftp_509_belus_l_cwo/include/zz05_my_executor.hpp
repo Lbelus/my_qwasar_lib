@@ -2,8 +2,7 @@
 #define MY_EXECUTOR_HEADER_
 #include <main_header.hpp>
 
-// #include <zz00_my_main_lang.hpp>
-// #include <yy05_my_ftp_cmd.hpp>
+
 
 /*
     class Exec
@@ -34,7 +33,7 @@ class Exec : public cmdFTP
             funcPtrMap[S_ACC_REIN]  = &cmdFTP::cmd_ACC_REIN;
             // funcPtrMap[S_ACC_EXIT]  = &cmdFTP::cmd_ACC_EXIT;
 
-            // TRANSFERT PARAMETER COMMANDS
+            // TRANSFER PARAMETER COMMANDS
             // funcPtrMap[S_TPC_PORT]  = &cmdFTP::cmd_TPC_PORT;
             // funcPtrMap[S_TPC_PASV]  = &cmdFTP::cmd_TPC_PASV;
             funcPtrMap[S_TPC_TYPE]  = &cmdFTP::cmd_TPC_TYPE;

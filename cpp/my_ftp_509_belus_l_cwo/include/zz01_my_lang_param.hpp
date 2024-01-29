@@ -2,7 +2,6 @@
 #define MY_LANG_PARAM_
 #include <main_header.hpp>
 
-// #include <zz00_my_main_lang.hpp>
 /*
 *SP = space
 *CRLF Carriage Return Line Feed

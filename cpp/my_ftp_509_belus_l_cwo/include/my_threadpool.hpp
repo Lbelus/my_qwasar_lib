@@ -1,12 +1,6 @@
 #ifndef MY_THREADPOOL_
 #define MY_THREADPOOL_
 
-// #include <iostream>
-// #include <vector>
-// #include <queue>
-// #include <thread>
-// #include <mutex>
-// #include <functional>
 #include <main_header.hpp>
 
 unsigned int GetThreadCount(unsigned int divBy);

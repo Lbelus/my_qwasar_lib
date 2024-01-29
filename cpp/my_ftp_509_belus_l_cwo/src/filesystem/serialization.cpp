@@ -21,26 +21,6 @@ std::filesystem::directory_entry getFileInfo()
 }
 
 
-// void serialize(const std::filesystem::path& filePath, std::ostream& os)
-// {
-//     std::ifstream in(filePath, std::ios::binary);
-//     if (!in)
-//     {
-//         std::cerr << "Failed to open file for serialization." << std::endl;
-//         return;
-//     }
-
-//     os << filePath.filename().string() << '\n';
-//     os << filePath.string() << '\n';
-//     os << std::filesystem::file_size(filePath) << '\n';
-//     os << std::filesystem::last_write_time(filePath).time_since_epoch().count() << '\n';
-
-//     os << in.rdbuf();
-
-//     in.close();
-// }
-
-
 void serialize(const std::filesystem::path& baseDir, const std::filesystem::path& relativeFilePath, std::ostream& os)
 {
     // Resolve the full path from the base directory and the relative file path

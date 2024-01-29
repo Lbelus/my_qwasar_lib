@@ -2,7 +2,6 @@
 #define MY_FTP_
 #include <csignal>
 
-// #include <yy00_my_main_server.hpp>
 #include <main_header.hpp>
 
 extern  bool handleClientInput(std::string& resp, Lexer& lx, std::string& cmd, SocketMov&& clientPI);
