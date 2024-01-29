@@ -97,6 +97,9 @@ The Project has three main components:
 - Learn how to use mulithreading;
 - learn how to handle multiple client at once;
 
+#### Technologies Used: 
+CPP, C, asm (nasm64), Makefile
+
 #### Installation:
 From the main directory : 
 ```bash
@@ -115,8 +118,6 @@ The Following CMD are available
 
 Every command existing on the bnf will receive an answer from the server, but only USER, PASS, CWD, PWD, LIST, PASV, PORT and RETR have been implemented;
 
-#### Technologies Used: 
-CPP, C, asm (nasm64), Makefile
 
 #### Project URL:
 https://github.com/Lbelus/my_qwasar_lib/tree/main/cpp/my_ftp_509_belus_l_cwo
