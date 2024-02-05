@@ -137,3 +137,7 @@ Every command existing on the bnf will receive an answer from the server, but on
 
 #### Project URL:
 https://github.com/Lbelus/my_qwasar_lib/tree/main/cpp/my_ftp_509_belus_l_cwo
+
+
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt="Qwasar SV -- Software Engineering School's Logo" src="https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png" width="20px" /></span>
