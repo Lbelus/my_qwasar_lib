@@ -88,3 +88,12 @@ You will be presented with a prompt to enter queries in SQL-like format. For exa
 The queries can include SELECT, INSERT, UPDATE, DELETE, and JOIN statements. The FROM and WHERE clauses are also supported. Only one WHERE condition and one JOIN condition are allowed per query.
 
 The Ctrl-C or QUIT commands can be used to exit the CLI.
+
+
+### The Core Team
+* [Lorris BELUS](//github.com/Lbelus) - Developer
+* [Igor Mirsalikhov](https://www.linkedin.com/in/igor-mirsalikhov/) - Research Assistant at Florida Polytechnic University
+
+
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt="Qwasar SV -- Software Engineering School's Logo" src="https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png" width="20px" /></span>

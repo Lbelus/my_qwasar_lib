@@ -37,21 +37,6 @@ Day 4: Take a break.
 Day 5: Complete the 2nd task.
 Day 6: Complete the 3rd task.
 It can be shown that the tasks cannot be completed in less than 6 days.
-
-
-
-space = represents the minimum number of days that must pass after the completion of a task before 
-
-another task of the same type can be performed
-
-
-Complete the next task from tasks, 
-
-or Take a break
-
-|.|.|.|.|.
-store on task the day + space 
-if day > task value then 
 '''
 
 

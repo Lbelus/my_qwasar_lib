@@ -48,7 +48,23 @@ A more comprehensive readme is available at the project URL;
 C, asm (nasm64), Makefile
 
 #### Usage:
+```c
+#include <main_header.h>
 
+int main(void)
+{
+    char *ptr = malloc(10);
+    if (ptr == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    strcpy(ptr, "Hello");
+    printf("%s\n", ptr);
+    free(ptr);
+    return 0;
+}
+```
 
 #### Installation:
 From the project root dir
