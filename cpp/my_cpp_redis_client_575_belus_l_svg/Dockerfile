@@ -15,7 +15,7 @@ RUN apt-get update && \
     unzip \
     pkg-config \
     nasm \
-    libhiredis-dev \
+    # libhiredis-dev \
     libasio-dev \
     curl
     # nginx
@@ -24,6 +24,13 @@ RUN apt-get update && \
 RUN   apt-get autoremove -y && \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/*
+
+# install Hiredis 
+RUN git clone https://github.com/redis/hiredis.git && \
+    cd hiredis && \
+    make && \
+    make install && \
+    ldconfig
 
 # Install csv2
 RUN git clone https://github.com/p-ranav/csv2.git /usr/src/csv2 && \

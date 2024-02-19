@@ -7,8 +7,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <my_format_shift.hpp>
-#include <main_header.hpp>
+#include <hiredis/hiredis.h>
 #include <my_tests.hpp>
+#include <my_redis_client.hpp>
 
 #endif

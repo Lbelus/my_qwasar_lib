@@ -33,7 +33,15 @@ list(FILTER CPP_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 option(ENABLE_CFLAGS "Enable CFLAGS" OFF)
 
 # Create an object library from the source files
-add_library(rediPackObj OBJECT ${ASM_SOURCES} ${CPP_SOURCES} ${SOURCES}    )
+add_library(rediPackObj OBJECT ${ASM_SOURCES} ${CPP_SOURCES} ${SOURCES})
+
+# Find and link hiredis library
+find_path(HIREDIS_HEADER hiredis)
+message(STATUS "Hiredis header found at: ${HIREDIS_HEADER}")
+target_include_directories(rediPackObj PUBLIC ${HIREDIS_HEADER})
+find_library(HIREDIS_LIB hiredis)
+message(STATUS "Hiredis library found at: ${HIREDIS_LIB}")
+target_link_libraries(rediPackObj PRIVATE ${HIREDIS_LIB})
 
 # Find and link redis-plus-plus library //it's placeholder CSV2 will be replaced.
 find_package(csv2 REQUIRED)
@@ -52,14 +60,12 @@ if(ENABLE_CFLAGS)
     target_link_libraries(rediPackObj PRIVATE -fsanitize=address)
 endif()
 
-
 # Create the main executable with main.cpp
 add_executable(rediPack src/main.cpp)
 target_link_libraries(rediPack PRIVATE rediPackObj)
 
 # Option to enable or disable GoogleTest
 option(ENABLE_GTEST "Enable Google Test" OFF)
-
 
 if(ENABLE_GTEST)
     enable_testing()

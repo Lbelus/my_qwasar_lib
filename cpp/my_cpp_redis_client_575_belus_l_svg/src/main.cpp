@@ -1,9 +1,10 @@
 #include <main_header.hpp>
 
+
+
 int main(int argc, char** argv)
 {
-    std::string arg = argv[1];
-    std::cout << "retreiving entry @" << arg << std::endl;
-    testMsgPacktoHiredis();
+    full_c_test();
+    full_cpp_test();
     return EXIT_SUCCESS;
 }
