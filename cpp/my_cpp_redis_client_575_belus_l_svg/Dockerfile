@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-# Set environment variables to non-interactive (this prevents some prompts)
+# Set environment variables to non-interactive
 ENV DEBIAN_FRONTEND=non-interactive
 
 # Update package list and install essential packages

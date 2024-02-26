@@ -1,9 +1,9 @@
 #ifndef __MAIN_HEADER_
 #define __MAIN_HEADER_
 
-#include <filesystem>
-#include <nlohmann/json.hpp>
-#include <csv2/reader.hpp>
+
+#include <string.h>
+#include <memory>
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,5 +1,5 @@
 #include <main_header.hpp>
-
+#include <unistd.h>
 void test_pp_get_and_set_opt()
 {
     printf("Begin c++ test on GET and SET\n");

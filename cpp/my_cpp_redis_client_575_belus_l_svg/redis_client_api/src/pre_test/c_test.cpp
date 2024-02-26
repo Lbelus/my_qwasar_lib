@@ -1,6 +1,5 @@
 #include <main_header.hpp>
-
-
+#include <unistd.h>
 // TEST IP AND TCP CONNECTION
 
 int test_redis_connection()
