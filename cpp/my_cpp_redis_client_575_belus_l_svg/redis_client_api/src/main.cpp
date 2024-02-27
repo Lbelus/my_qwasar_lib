@@ -1,5 +1,5 @@
-#include <main_header.hpp>
-
+#include <my_redis_client.hpp>
+#include <my_tests.hpp>
 
 
 int main(int argc, char** argv)

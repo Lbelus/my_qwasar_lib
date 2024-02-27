@@ -1,6 +1,11 @@
 #ifndef MY_MAIN_LANG_
 #define MY_MAIN_LANG_
 
+
+#include <hiredis/hiredis.h>
+#include <rediPack/rediPack>
+// #include <rediPack/my_tests.hpp>
+
 #include <memory>
 #include <iostream>
 #include <sstream>
@@ -28,5 +33,6 @@
 #include <zz06_my_parser.hpp>
 #include <zz07_my_executor.hpp>
 #include <zz08_my_custom_error.hpp>
+
 
 #endif

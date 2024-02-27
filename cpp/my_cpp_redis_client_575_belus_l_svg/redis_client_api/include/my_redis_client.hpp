@@ -3,7 +3,11 @@
 
 #include <string>
 #include <hiredis/hiredis.h>
-
+#include <string.h>
+#include <memory>
+#include <iostream>
+#include <vector>
+#include <string>
 
 namespace my_redis
 {
