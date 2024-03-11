@@ -29,7 +29,7 @@ void test_pp_expire_rename_and_unlink_opt()
     printf("Begin c++ test on EXPIRE, RENAME and UNLINK\n");
     my_redis::RedisClient rc("tcp://myredis:6379");
     std::cout << "SET operation - " << rc.set("Hiredis01", "Hiredis01_value") << std::endl;
-    rc.expire("Hiredis01", 3);
+    std::cout <<  rc.expire("Hiredis01", 3) << std::endl;
     std::cout << "GET operation - value: " << rc.get("Hiredis01")  << std::endl;
     printf("Waiting for key to expire...\n");
     sleep(4);
@@ -142,6 +142,20 @@ void test_pp_redis_hgetall_hkeys_and_hlen_opt()
     printf("End of c++ test half...\n\n\n");
 }
 
+void test_commons()
+{
+    printf("Begin c++ test on COMMONS\n");
+    my_redis::RedisClient rc("tcp://myredis:6379");
+    std::cout << rc.echo("myhash") << std::endl;
+    std::cout << rc.ping() << std::endl;
+    std::cout << rc.flushall() << std::endl;
+    std::cout << rc.info() << std::endl;  
+
+    printf("End of c++ test half...\n\n\n");
+}
+
+
+
 int full_cpp_test()
 {
     test_pp_get_and_set_opt();
@@ -151,5 +165,6 @@ int full_cpp_test()
     test_pp_redis_llen_lrem_lindex_lset_opt();
     test_pp_redis_hget_hexists_hmset_hdel_hset_hvals_opt();
     test_pp_redis_hgetall_hkeys_and_hlen_opt();
+    test_commons();
     return EXIT_SUCCESS;  
 }

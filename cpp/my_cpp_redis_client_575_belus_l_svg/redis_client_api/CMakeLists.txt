@@ -45,14 +45,6 @@ find_library(HIREDIS_LIB hiredis)
 message(STATUS "Hiredis library found at: ${HIREDIS_LIB}")
 target_link_libraries(rediPackObj PRIVATE ${HIREDIS_LIB})
 
-# # Find and link redis-plus-plus library //it's placeholder CSV2 will be replaced.
-# find_package(csv2 REQUIRED)
-# target_link_libraries(rediPackObj PRIVATE ${CSV2_LIB})
-
-# # Find and link nlohmann_json library
-# find_package(nlohmann_json 3.11.3 REQUIRED)
-# target_link_libraries(rediPackObj PRIVATE nlohmann_json::nlohmann_json)
-
 if(ENABLE_CFLAGS)
     target_compile_options(rediPackObj PRIVATE 
     $<$<COMPILE_LANGUAGE:C>:-fsanitize=address -Wall -Wextra -Werror>
@@ -96,7 +88,7 @@ set(EXEC_PREFIX "\${prefix}")
 set(LIBDIR "\${exec_prefix}/${CMAKE_INSTALL_LIBDIR}")
 set(INCLUDEDIR "\${prefix}/${CMAKE_INSTALL_INCLUDEDIR}")
 
-# Ensure these variables are correctly set according to your project structure
+
 configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/pkg-config.pc.in"
     "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"

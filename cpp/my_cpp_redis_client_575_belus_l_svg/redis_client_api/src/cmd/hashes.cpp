@@ -28,7 +28,6 @@ namespace my_redis
             resp = concatenate("Failed to retrieve value for field '", field,"'." );
             throw std::runtime_error(resp);
         }
-
     }
 
     std::string RedisClient::hexists(const char* key, const char* field)

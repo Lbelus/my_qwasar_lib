@@ -15,10 +15,10 @@ RUN apt-get update && \
     unzip \
     pkg-config \
     nasm \
+    openssl libssl-dev \
     # libhiredis-dev \
     libasio-dev \
     curl
-    # nginx
 
 # Clean up to reduce image size
 RUN   apt-get autoremove -y && \
@@ -33,18 +33,18 @@ RUN git clone https://github.com/redis/hiredis.git && \
     ldconfig
 
 # Install csv2
-RUN git clone https://github.com/p-ranav/csv2.git /usr/src/csv2 && \
-    cd /usr/src/csv2 && \
-    cmake -S . -B build -DCSV2_BUILD_TESTS=OFF && \
-    cmake --install build && \
-    rm -rf /usr/src/csv2
+# RUN git clone https://github.com/p-ranav/csv2.git /usr/src/csv2 && \
+#     cd /usr/src/csv2 && \
+#     cmake -S . -B build -DCSV2_BUILD_TESTS=OFF && \
+#     cmake --install build && \
+#     rm -rf /usr/src/csv2
 
 # Install nlohmann/json
-RUN git clone https://github.com/nlohmann/json.git /usr/src/nlohmann_json && \
-    cd /usr/src/nlohmann_json && \
-    cmake -S . -B build -DBUILD_TESTING=OFF && \
-    cmake --install build && \
-    rm -rf /usr/src/nlohmann_json
+# RUN git clone https://github.com/nlohmann/json.git /usr/src/nlohmann_json && \
+#     cd /usr/src/nlohmann_json && \
+#     cmake -S . -B build -DBUILD_TESTING=OFF && \
+#     cmake --install build && \
+#     rm -rf /usr/src/nlohmann_json
     # cmake --build build --target install
 
 # Install google-test

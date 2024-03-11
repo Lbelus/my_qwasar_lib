@@ -1026,6 +1026,87 @@ int test_redis_hgetall_hkeys_and_hlen_opt()
     return EXIT_SUCCESS;
 }
 
+int echo_command(redisContext *c, const char *message)
+{
+    redisReply *reply;
+    reply = (redisReply *)redisCommand(c, "ECHO %s", message);
+    if (reply == NULL)
+    {
+        printf("Error: %s\n", c->errstr);
+        return EXIT_FAILURE;
+    }
+    else
+    {
+        printf("Echo: %s\n", reply->str);
+        freeReplyObject(reply);
+        std::unique_ptr<redisReply, decltype(&freeReplyObject)> autoReply(reply, freeReplyObject);
+    }
+    return EXIT_SUCCESS;
+}
+
+int ping_command(redisContext *c)
+{
+    redisReply *reply;
+    reply = (redisReply *)redisCommand(c, "PING");
+    if (reply == NULL)
+    {
+        printf("Error: %s\n", c->errstr);
+        return EXIT_FAILURE;
+
+    }
+    else
+    {
+        printf("Ping: %s\n", reply->str);
+        freeReplyObject(reply);
+    }
+    return EXIT_SUCCESS;
+}
+
+
+int flushall_command(redisContext *c)
+{
+    redisReply *reply;
+    reply = (redisReply *)redisCommand(c, "FLUSHALL");
+    if (reply == NULL)
+    {
+        printf("Error: %s\n", c->errstr);
+        return EXIT_FAILURE;
+
+    }
+    else
+    {
+        printf("FlushAll: %s\n", reply->str);
+        freeReplyObject(reply);
+    }
+    return EXIT_SUCCESS;
+}
+
+int info_command(redisContext *c, const char *section)
+{
+    redisReply *reply;
+    if (section)
+    {
+        reply = (redisReply *)redisCommand(c, "INFO %s", section);
+    }
+    else
+    {
+        reply = (redisReply *)redisCommand(c, "INFO");
+    }
+    
+    if (reply == NULL)
+    {
+        printf("Error: %s\n", c->errstr);
+        return EXIT_FAILURE;
+    }
+    else
+    {
+        printf("Info: \n%s\n", reply->str);
+        freeReplyObject(reply);
+    }
+    return EXIT_SUCCESS;
+}
+
+
 int full_c_test()
 {
     printf("full C tests:\n\n");

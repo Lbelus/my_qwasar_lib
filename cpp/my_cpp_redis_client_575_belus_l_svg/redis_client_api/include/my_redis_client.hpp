@@ -7,7 +7,6 @@
 #include <memory>
 #include <iostream>
 #include <vector>
-#include <string>
 
 namespace my_redis
 {
@@ -81,6 +80,12 @@ namespace my_redis
             std::vector<std::pair<std::string, std::string>> hgetall(const char* key);
             std::vector<std::string> hkeys(const char* key);
             std::string hlen(const char* key);
+
+//common
+            std::string echo(const char* message);
+            std::string ping();
+            std::string flushall();
+            std::string info(const char* section = nullptr);
 
             ~RedisClient()
             {
